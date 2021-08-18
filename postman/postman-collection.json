@@ -1,0 +1,452 @@
+{
+  "info": {
+    "name": "demoApp",
+    "_postman_id": "96966fc9-b23f-4e32-87c7-ead887b7b43a",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "device",
+      "description": "device APIs",
+      "item": [
+        {
+          "name": "user",
+          "description": "user Model APIs",
+          "item": [
+            {
+              "name": "getuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserCount",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Gordon Parker\",\n      \"password\": \"8RfIUWr_x5yo2ry\",\n      \"email\": \"Jewel_Koelpin@yahoo.com\",\n      \"name\": \"Betsy Koepp\",\n      \"role\": 1\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/partial-update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/softDelete/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteManyuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/softDeleteMany",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ids\": [\n    \"{{id}}\"\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateBulkuser",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/updateBulk",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"isActive\": true\n  },\n  \"data\": {\n    \"isDeleted\": false\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateProfile",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/update-profile",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "description": "device Login",
+          "item": [
+            {
+              "name": "Login in device",
+              "request": {
+                "url": "http://localhost:5000/device/auth/login",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Your username\",\n  \"password\": \"YourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Register User in device",
+              "request": {
+                "url": "http://localhost:5000/device/auth/register",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Forgot Password in device",
+              "request": {
+                "url": "http://localhost:5000/device/auth/forgot-password",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"yourmail@gmail.com\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Validate OTP in device",
+              "request": {
+                "url": "http://localhost:5000/device/auth/validate-otp",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"otp\": \"5898\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Change Password in device",
+              "request": {
+                "url": "http://localhost:5000/device/api/v1/user/change-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"oldPassword\": \"YourOldPassword\",\n  \"newPassword\": \"YourNewPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Reset password in device",
+              "request": {
+                "url": "http://localhost:5000/device/auth/reset-password",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
