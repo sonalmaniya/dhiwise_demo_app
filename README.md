@@ -19,8 +19,8 @@
     ```$ npm start```
 3. When the app will run successfully, One user with Admin role,
 	# Default User credentials
-	**username** : Darryl Goodwin
-	**password** : KzUgYyf78GHjA1s
+	**username** : Al Feest
+	**password** : OKZqdFCmIUHESUF
 
 ## How to run with Docker ? :
 - if you have docker file you can execute following command
