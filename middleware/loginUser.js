@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const util = require('../utils/messages');
-const deviceSecret = require('../constants/authConstant').JWT.DEVICE_SECRET;
+const adminSecret = require('../constants/authConstant').JWT.ADMIN_SECRET;
 
 /*
  * policy : only authentication policy for platform wise check, 
@@ -12,8 +12,8 @@ const authenticateJWT = (req, res, next) => {
     const token = authHeader.split(' ')[1];
     let url = req.originalUrl;
     let secret = '';
-    if (url.includes('device')){
-      secret = deviceSecret;
+    if (url.includes('admin')){
+      secret = adminSecret;
     }
     jwt.verify(token,secret, (err, user) => {
       if (err) {

@@ -37,9 +37,9 @@ const verifyCallback = (req, resolve, reject, requiredRights) => async (err, use
 const auth = (...requiredRights) => async (req, res, next) => {
 
   let url = req.originalUrl;
-  if (url.includes('device')){
+  if (url.includes('admin')){
     return new Promise((resolve, reject) => {
-      passport.authenticate('device-rule', { session: false }, verifyCallback(req, resolve, reject, requiredRights))(
+      passport.authenticate('admin-rule', { session: false }, verifyCallback(req, resolve, reject, requiredRights))(
         req,
         res,
         next

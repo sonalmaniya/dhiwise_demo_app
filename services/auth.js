@@ -119,14 +119,14 @@ auth.loginUser = async (username,password,url) => {
             data:'You have no assigned any role'
           };
         }
-        if (url.includes('device')){
-          if (!LOGIN_ACCESS[user.role].includes(PLATFORM.DEVICE)){
+        if (url.includes('admin')){
+          if (!LOGIN_ACCESS[user.role].includes(PLATFORM.ADMIN)){
             return {
               flag:true,
               data:'you are unable to access this platform'
             };
           }
-          token = await generateToken(userData,JWT.DEVICE_SECRET);
+          token = await generateToken(userData,JWT.ADMIN_SECRET);
         }
         if (user.loginRetryLimit){
           await dbService.updateDocument(User,user.id,{

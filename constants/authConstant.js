@@ -3,39 +3,39 @@
  */
 
 const JWT = {
-  DEVICE_SECRET:'myjwtdevicesecret',
+  ADMIN_SECRET:'myjwtadminsecret',
   EXPIRES_IN: 10000
 };
 
-const USER_ROLE = { User:1, };
+const USER_ROLE = { Admin :1, };
 
-const PLATFORM = { DEVICE:1, };
+const PLATFORM = { ADMIN:1, };
 
-let LOGIN_ACCESS = { [USER_ROLE.User]:[PLATFORM.DEVICE], };
+let LOGIN_ACCESS = { [USER_ROLE.Admin]:[PLATFORM.ADMIN], };
 
 const DEFAULT_ROLE = 1;
 
 const ROLE_RIGHTS = {
     
-  [USER_ROLE.User] : [
-    'getAllByUserInDevicePlatform',
-    'getByUserInDevicePlatform',
-    'aggregateByUserInDevicePlatform',
-    'getCountByUserInDevicePlatform',
-    'createByUserInDevicePlatform',
-    'addBulkByUserInDevicePlatform',
-    'updateByUserInDevicePlatform',
-    'updateBulkByUserInDevicePlatform',
-    'partialUpdateByUserInDevicePlatform',
-    'deleteByUserInDevicePlatform',
-    'softDeleteByUserInDevicePlatform',
-    'upsertByUserInDevicePlatform',
-    'fileUploadByUserInDevicePlatform',
-    'logoutByUserInDevicePlatform',
-    'softDeleteManyByUserInDevicePlatform',
-    'deleteManyByUserInDevicePlatform',
-    'changePasswordByUserInDevicePlatform',
-    'updateProfileByUserInDevicePlatform'
+  [USER_ROLE.Admin] : [
+    'getAllByAdminInAdminPlatform',
+    'getByAdminInAdminPlatform',
+    'aggregateByAdminInAdminPlatform',
+    'getCountByAdminInAdminPlatform',
+    'createByAdminInAdminPlatform',
+    'addBulkByAdminInAdminPlatform',
+    'updateByAdminInAdminPlatform',
+    'updateBulkByAdminInAdminPlatform',
+    'partialUpdateByAdminInAdminPlatform',
+    'deleteByAdminInAdminPlatform',
+    'softDeleteByAdminInAdminPlatform',
+    'upsertByAdminInAdminPlatform',
+    'fileUploadByAdminInAdminPlatform',
+    'logoutByAdminInAdminPlatform',
+    'softDeleteManyByAdminInAdminPlatform',
+    'deleteManyByAdminInAdminPlatform',
+    'changePasswordByAdminInAdminPlatform',
+    'updateProfileByAdminInAdminPlatform'
   ],
     
 };

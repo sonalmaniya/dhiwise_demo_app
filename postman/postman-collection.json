@@ -1,13 +1,13 @@
 {
   "info": {
     "name": "demoApp",
-    "_postman_id": "96966fc9-b23f-4e32-87c7-ead887b7b43a",
+    "_postman_id": "50e3368e-be05-45df-84ae-484984d4792d",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "device",
-      "description": "device APIs",
+      "name": "admin",
+      "description": "admin APIs",
       "item": [
         {
           "name": "user",
@@ -16,7 +16,7 @@
             {
               "name": "getuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/{{id}}",
+                "url": "http://localhost:5000/admin/user/{{id}}",
                 "method": "GET",
                 "header": [
                   {
@@ -41,7 +41,7 @@
             {
               "name": "adduser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/create",
+                "url": "http://localhost:5000/admin/user/create",
                 "method": "POST",
                 "header": [
                   {
@@ -57,7 +57,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                  "raw": "{\n  \"username\": \"Winifred Nienow\",\n  \"password\": \"PGDitqw6EPfuVQo\",\n  \"email\": \"Gina.Aufderhar@yahoo.com\",\n  \"name\": \"Bobby Corkery\",\n  \"role\": 1\n}"
                 },
                 "description": ""
               },
@@ -66,7 +66,7 @@
             {
               "name": "findAlluser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/list",
+                "url": "http://localhost:5000/admin/user/list",
                 "method": "POST",
                 "header": [
                   {
@@ -91,7 +91,7 @@
             {
               "name": "getuserCount",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/count",
+                "url": "http://localhost:5000/admin/user/count",
                 "method": "POST",
                 "header": [
                   {
@@ -116,7 +116,7 @@
             {
               "name": "aggregateuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/aggregate",
+                "url": "http://localhost:5000/admin/user/aggregate",
                 "method": "POST",
                 "header": [
                   {
@@ -141,7 +141,7 @@
             {
               "name": "insertBulkuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/addBulk",
+                "url": "http://localhost:5000/admin/user/addBulk",
                 "method": "POST",
                 "header": [
                   {
@@ -157,7 +157,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Gordon Parker\",\n      \"password\": \"8RfIUWr_x5yo2ry\",\n      \"email\": \"Jewel_Koelpin@yahoo.com\",\n      \"name\": \"Betsy Koepp\",\n      \"role\": 1\n    }\n  ]\n}"
+                  "raw": "{\n  \"data\": [\n    {\n      \"username\": \"Winifred Nienow\",\n      \"password\": \"PGDitqw6EPfuVQo\",\n      \"email\": \"Gina.Aufderhar@yahoo.com\",\n      \"name\": \"Bobby Corkery\",\n      \"role\": 1\n    }\n  ]\n}"
                 },
                 "description": ""
               },
@@ -166,7 +166,7 @@
             {
               "name": "updateuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/update/{{id}}",
+                "url": "http://localhost:5000/admin/user/update/{{id}}",
                 "method": "PUT",
                 "header": [
                   {
@@ -182,7 +182,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                  "raw": "{\n  \"username\": \"Winifred Nienow\",\n  \"password\": \"PGDitqw6EPfuVQo\",\n  \"email\": \"Gina.Aufderhar@yahoo.com\",\n  \"name\": \"Bobby Corkery\",\n  \"role\": 1\n}"
                 },
                 "description": ""
               },
@@ -191,7 +191,7 @@
             {
               "name": "partialupdateuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/partial-update/{{id}}",
+                "url": "http://localhost:5000/admin/user/partial-update/{{id}}",
                 "method": "PUT",
                 "header": [
                   {
@@ -216,7 +216,7 @@
             {
               "name": "softDeleteuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/softDelete/{{id}}",
+                "url": "http://localhost:5000/admin/user/softDelete/{{id}}",
                 "method": "PUT",
                 "header": [
                   {
@@ -241,7 +241,7 @@
             {
               "name": "softDeleteManyuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/softDeleteMany",
+                "url": "http://localhost:5000/admin/user/softDeleteMany",
                 "method": "PUT",
                 "header": [
                   {
@@ -266,7 +266,7 @@
             {
               "name": "updateBulkuser",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/updateBulk",
+                "url": "http://localhost:5000/admin/user/updateBulk",
                 "method": "PUT",
                 "header": [
                   {
@@ -291,7 +291,7 @@
             {
               "name": "updateProfile",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/update-profile",
+                "url": "http://localhost:5000/admin/user/update-profile",
                 "method": "PUT",
                 "header": [
                   {
@@ -307,7 +307,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                  "raw": "{\n  \"username\": \"Winifred Nienow\",\n  \"password\": \"PGDitqw6EPfuVQo\",\n  \"email\": \"Gina.Aufderhar@yahoo.com\",\n  \"name\": \"Bobby Corkery\",\n  \"role\": 1\n}"
                 },
                 "description": ""
               },
@@ -317,12 +317,12 @@
         },
         {
           "name": "login",
-          "description": "device Login",
+          "description": "admin Login",
           "item": [
             {
-              "name": "Login in device",
+              "name": "Login in admin",
               "request": {
-                "url": "http://localhost:5000/device/auth/login",
+                "url": "http://localhost:5000/admin/auth/login",
                 "method": "POST",
                 "header": [
                   {
@@ -340,9 +340,9 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Register User in device",
+              "name": "Register User in admin",
               "request": {
-                "url": "http://localhost:5000/device/auth/register",
+                "url": "http://localhost:5000/admin/auth/register",
                 "method": "POST",
                 "header": [
                   {
@@ -353,16 +353,16 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"username\": \"Gordon Parker\",\n  \"password\": \"8RfIUWr_x5yo2ry\",\n  \"email\": \"Jewel_Koelpin@yahoo.com\",\n  \"name\": \"Betsy Koepp\",\n  \"role\": 1\n}"
+                  "raw": "{\n  \"username\": \"Winifred Nienow\",\n  \"password\": \"PGDitqw6EPfuVQo\",\n  \"email\": \"Gina.Aufderhar@yahoo.com\",\n  \"name\": \"Bobby Corkery\",\n  \"role\": 1\n}"
                 },
                 "description": ""
               },
               "_postman_isSubFolder": true
             },
             {
-              "name": "Forgot Password in device",
+              "name": "Forgot Password in admin",
               "request": {
-                "url": "http://localhost:5000/device/auth/forgot-password",
+                "url": "http://localhost:5000/admin/auth/forgot-password",
                 "method": "POST",
                 "header": [
                   {
@@ -380,9 +380,9 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Validate OTP in device",
+              "name": "Validate OTP in admin",
               "request": {
-                "url": "http://localhost:5000/device/auth/validate-otp",
+                "url": "http://localhost:5000/admin/auth/validate-otp",
                 "method": "POST",
                 "header": [
                   {
@@ -400,9 +400,9 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Change Password in device",
+              "name": "Change Password in admin",
               "request": {
-                "url": "http://localhost:5000/device/api/v1/user/change-password",
+                "url": "http://localhost:5000/admin/user/change-password",
                 "method": "PUT",
                 "header": [
                   {
@@ -425,9 +425,9 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Reset password in device",
+              "name": "Reset password in admin",
               "request": {
-                "url": "http://localhost:5000/device/auth/reset-password",
+                "url": "http://localhost:5000/admin/auth/reset-password",
                 "method": "PUT",
                 "header": [
                   {
@@ -439,6 +439,1130 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"code\": \"5898\",\n  \"newPassword\": \"yourPassword\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "role",
+          "description": "role Model APIs",
+          "item": [
+            {
+              "name": "getrole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addrole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Tamara Huel\",\n  \"code\": \"Officer\",\n  \"weight\": 647\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkrole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"name\": \"Tamara Huel\",\n      \"code\": \"Officer\",\n      \"weight\": 647\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllrole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregaterole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getroleCount",
+              "request": {
+                "url": "http://localhost:5000/admin/role/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertrole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Tamara Huel\",\n  \"code\": \"Officer\",\n  \"weight\": 647\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdaterole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Tamara Huel\",\n  \"code\": \"Officer\",\n  \"weight\": 647,\n  \"id\": \"{{id}}\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdaterole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/partial-update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleterole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/softDelete/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updaterole",
+              "request": {
+                "url": "http://localhost:5000/admin/role/update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Tamara Huel\",\n  \"code\": \"Officer\",\n  \"weight\": 647\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "projectRoute",
+          "description": "projectRoute Model APIs",
+          "item": [
+            {
+              "name": "getprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Island\",\n  \"method\": \"quantifying\",\n  \"uri\": \"matrix\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"route_name\": \"Island\",\n      \"method\": \"quantifying\",\n      \"uri\": \"matrix\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getprojectRouteCount",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Island\",\n  \"method\": \"quantifying\",\n  \"uri\": \"matrix\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdateprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Island\",\n  \"method\": \"quantifying\",\n  \"uri\": \"matrix\",\n  \"id\": \"{{id}}\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/partial-update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/softDelete/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateprojectRoute",
+              "request": {
+                "url": "http://localhost:5000/admin/projectroute/update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"route_name\": \"Island\",\n  \"method\": \"quantifying\",\n  \"uri\": \"matrix\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "routeRole",
+          "description": "routeRole Model APIs",
+          "item": [
+            {
+              "name": "getrouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "addrouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"611de0761977d6cdca413c12\",\n  \"roleId\": \"611de0761977d6cdca413c13\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkrouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"routeId\": \"611de0761977d6cdca413c12\",\n      \"roleId\": \"611de0761977d6cdca413c13\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAllrouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregaterouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getrouteRoleCount",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertrouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"611de0761977d6cdca413c12\",\n  \"roleId\": \"611de0761977d6cdca413c13\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdaterouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"611de0761977d6cdca413c12\",\n  \"roleId\": \"611de0761977d6cdca413c13\",\n  \"id\": \"{{id}}\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdaterouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/partial-update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updaterouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"routeId\": \"611de0761977d6cdca413c12\",\n  \"roleId\": \"611de0761977d6cdca413c13\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleterouteRole",
+              "request": {
+                "url": "http://localhost:5000/admin/routerole/softDelete/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            }
+          ]
+        },
+        {
+          "name": "userRole",
+          "description": "userRole Model APIs",
+          "item": [
+            {
+              "name": "getuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/{{id}}",
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "adduserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/create",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"611de0761977d6cdca413c15\",\n  \"roleId\": \"611de0761977d6cdca413c16\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "insertBulkuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/addBulk",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": [\n    {\n      \"userId\": \"611de0761977d6cdca413c15\",\n      \"roleId\": \"611de0761977d6cdca413c16\"\n    }\n  ]\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "findAlluserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/list",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"query\": {},\n  \"options\": {\n    \"select\": [\n      \"field 1\",\n      \"field 2\"\n    ],\n    \"collation\": \"\",\n    \"sort\": \"\",\n    \"populate\": \"\",\n    \"projection\": \"\",\n    \"lean\": false,\n    \"leanWithId\": true,\n    \"offset\": 0,\n    \"page\": 1,\n    \"limit\": 10,\n    \"customLabels\": {},\n    \"pagination\": true,\n    \"useEstimatedCount\": false,\n    \"useCustomCountFn\": false,\n    \"forceCountFn\": false,\n    \"read\": {},\n    \"options\": {}\n  },\n  \"isCountOnly\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "aggregateuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/aggregate",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"group\": {\n    \"avg\": {\n      \"key\": {\n        \"_id\": [\n          \"field1\",\n          \"field2\"\n        ]\n      }\n    },\n    \"sum\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"min\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"max\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    },\n    \"addToSet\": {\n      \"key\": {\n        \"_id\": \"field\"\n      }\n    }\n  },\n  \"match\": {\n    \"key\": {\n      \"field\": \"value\"\n    }\n  },\n  \"project\": {\n    \"gt\": {\n      \"key\": {\n        \"field\": \"value\"\n      }\n    }\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "getuserRoleCount",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/count",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"where\": {\n    \"isActive\": true\n  }\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForInsertuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"611de0761977d6cdca413c15\",\n  \"roleId\": \"611de0761977d6cdca413c16\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "upsertForUpdateuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/upsert",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"611de0761977d6cdca413c15\",\n  \"roleId\": \"611de0761977d6cdca413c16\",\n  \"id\": \"{{id}}\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "partialupdateuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/partial-update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"isActive\": true,\n  \"isDeleted\": false\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "updateuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/update/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"611de0761977d6cdca413c15\",\n  \"roleId\": \"611de0761977d6cdca413c16\"\n}"
+                },
+                "description": ""
+              },
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "softDeleteuserRole",
+              "request": {
+                "url": "http://localhost:5000/admin/userrole/softDelete/{{id}}",
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
                 },
                 "description": ""
               },

@@ -1,5 +1,5 @@
 /*
- * device authentication - with passport
+ * admin authentication - with passport
  */
 
 const {
@@ -9,11 +9,11 @@ const { JWT } = require('../constants/authConstant');
 const user = require('../model/user');
 
 module.exports = {
-  devicePassportStrategy: passport => {
+  adminPassportStrategy: passport => {
     const options = {};
     options.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-    options.secretOrKey = JWT.DEVICE_SECRET;
-    passport.use('device-rule',
+    options.secretOrKey = JWT.ADMIN_SECRET;
+    passport.use('admin-rule',
       new Strategy(options, (payload, done) => {
         user.findOne({ username: payload.username }, (err, user) => {
           if (err) {
